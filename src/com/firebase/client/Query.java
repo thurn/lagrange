@@ -4,8 +4,12 @@ public class Query {
 
   private final Object firebase;
 
-  protected Query(Object firebase) {
+  public Query(Object firebase) {
     this.firebase = firebase;
+  }
+
+  public void helloWorld() {
+    System.out.println("Hello, world!");
   }
 
 }
