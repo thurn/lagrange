@@ -18,12 +18,13 @@
     FCQuery *query = [[FCQuery alloc] init];
     [query helloWorld];
     FCFirebase *fc = [[FCFirebase alloc] initWithNSString: @"https://gwt.firebaseio.com/"];
+    [fc setValueWithId: @"dthurn was here"];
     
-    Firebase *f = [[Firebase alloc] initWithUrl:@"https://gwt.firebaseio.com/"];
-    [f setValue:@"hi"];
-    [f observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-        NSLog(@"%@ -> %@", snapshot.name, snapshot.value);
-    }];
+//    Firebase *f = [[Firebase alloc] initWithUrl:@"https://gwt.firebaseio.com/"];
+//    [f setValue:@"hi"];
+//    [f observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+//        NSLog(@"%@ -> %@", snapshot.name, snapshot.value);
+//    }];
     
     return YES;
 }

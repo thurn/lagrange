@@ -7,7 +7,7 @@ public class Query {
   public Query(Object firebase) {
     this.firebase = firebase;
   }
-
+  
   public void helloWorld() {
     System.out.println("Hello, world!");
   }

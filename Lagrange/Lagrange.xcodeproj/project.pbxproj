@@ -26,9 +26,10 @@
 		7C74BB8418284763008A63C0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C74BB8318284763008A63C0 /* CFNetwork.framework */; };
 		7C74BB861828476E008A63C0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C74BB851828476E008A63C0 /* Security.framework */; };
 		7C74BB8818284778008A63C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C74BB8718284778008A63C0 /* SystemConfiguration.framework */; };
-		7C84654618243DA300F35783 /* Firebase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C84654318243DA300F35783 /* Firebase.m */; };
 		7C84654718243DA300F35783 /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C84654518243DA300F35783 /* Query.m */; };
 		7CFD7F6E18285E9900FE0E9E /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFD7F6D18285E9900FE0E9E /* Firebase.framework */; };
+		7CFD7F7218286BA300FE0E9E /* Firebase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD7F6F18286BA300FE0E9E /* Firebase.m */; };
+		7CFD7F7318286BA300FE0E9E /* FirebaseError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD7F7118286BA300FE0E9E /* FirebaseError.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,10 +68,12 @@
 		7C74BB851828476E008A63C0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7C74BB8718284778008A63C0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7C84654218243DA300F35783 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
-		7C84654318243DA300F35783 /* Firebase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Firebase.m; sourceTree = "<group>"; };
 		7C84654418243DA300F35783 /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Query.h; sourceTree = "<group>"; };
 		7C84654518243DA300F35783 /* Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Query.m; sourceTree = "<group>"; };
 		7CFD7F6D18285E9900FE0E9E /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		7CFD7F6F18286BA300FE0E9E /* Firebase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Firebase.m; path = ../../../out/Firebase.m; sourceTree = "<group>"; };
+		7CFD7F7018286BA300FE0E9E /* FirebaseError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirebaseError.h; path = ../../../out/FirebaseError.h; sourceTree = "<group>"; };
+		7CFD7F7118286BA300FE0E9E /* FirebaseError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirebaseError.m; path = ../../../out/FirebaseError.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,8 +188,10 @@
 		7C84654118243DA300F35783 /* out */ = {
 			isa = PBXGroup;
 			children = (
+				7CFD7F6F18286BA300FE0E9E /* Firebase.m */,
+				7CFD7F7018286BA300FE0E9E /* FirebaseError.h */,
+				7CFD7F7118286BA300FE0E9E /* FirebaseError.m */,
 				7C84654218243DA300F35783 /* Firebase.h */,
-				7C84654318243DA300F35783 /* Firebase.m */,
 				7C84654418243DA300F35783 /* Query.h */,
 				7C84654518243DA300F35783 /* Query.m */,
 			);
@@ -292,8 +297,9 @@
 			files = (
 				7C187EEC1824329E0082E0E2 /* ViewController.m in Sources */,
 				7C187EE31824329E0082E0E2 /* AppDelegate.m in Sources */,
-				7C84654618243DA300F35783 /* Firebase.m in Sources */,
 				7C187EDF1824329E0082E0E2 /* main.m in Sources */,
+				7CFD7F7218286BA300FE0E9E /* Firebase.m in Sources */,
+				7CFD7F7318286BA300FE0E9E /* FirebaseError.m in Sources */,
 				7C84654718243DA300F35783 /* Query.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

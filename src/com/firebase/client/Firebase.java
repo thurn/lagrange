@@ -1,5 +1,8 @@
 package com.firebase.client;
 
+import java.util.List;
+import java.util.Map;
+
 /*-[
 #import <Firebase/Firebase.h>
 ]-*/
@@ -39,8 +42,28 @@ public class Firebase extends Query {
   }
   
   public void setValue(Object value, Object priority, CompletionListener listener) {
-    
+    if (value == null || value instanceof Number || value instanceof String) {
+      setValueId(value);
+    } else if (value instanceof Boolean) {
+      setValueId(((Boolean)value).booleanValue());
+    } else if (value instanceof List) {
+      setValueList((List)value);
+    } else if (value instanceof Map) {
+      setValueMap((Map)value);
+    }
   }
-
-
+  
+  private native void setValueId(Object value) /*-[
+    Firebase *firebase = self->firebase_;
+    [firebase setValue: value];
+  ]-*/;
+  
+  private native void setValueList(List value) /*-[
+    Firebase *firebase = self->firebase_;
+  ]-*/;
+  
+  private native void setValueMap(Map value) /*-[
+    Firebase *firebase = self->firebase_;
+  ]-*/;
+  
 }
