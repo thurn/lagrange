@@ -26,10 +26,15 @@
 		7C74BB8418284763008A63C0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C74BB8318284763008A63C0 /* CFNetwork.framework */; };
 		7C74BB861828476E008A63C0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C74BB851828476E008A63C0 /* Security.framework */; };
 		7C74BB8818284778008A63C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C74BB8718284778008A63C0 /* SystemConfiguration.framework */; };
-		7C84654718243DA300F35783 /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C84654518243DA300F35783 /* Query.m */; };
+		7C9F4F321828B06D006BEBC6 /* ChildEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F271828B06D006BEBC6 /* ChildEventListener.m */; };
+		7C9F4F331828B06D006BEBC6 /* DataSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F291828B06D006BEBC6 /* DataSnapshot.m */; };
+		7C9F4F341828B06D006BEBC6 /* Firebase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F2B1828B06D006BEBC6 /* Firebase.m */; };
+		7C9F4F351828B06D006BEBC6 /* FirebaseError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F2D1828B06D006BEBC6 /* FirebaseError.m */; };
+		7C9F4F361828B06D006BEBC6 /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F2F1828B06D006BEBC6 /* Query.m */; };
+		7C9F4F371828B06D006BEBC6 /* ValueEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F311828B06D006BEBC6 /* ValueEventListener.m */; };
+		7C9F4F3A1828B342006BEBC6 /* WrappedValueEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F391828B342006BEBC6 /* WrappedValueEventListener.m */; };
+		7C9F4F3D1828B551006BEBC6 /* TestPrintingListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F3C1828B551006BEBC6 /* TestPrintingListener.m */; };
 		7CFD7F6E18285E9900FE0E9E /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFD7F6D18285E9900FE0E9E /* Firebase.framework */; };
-		7CFD7F7218286BA300FE0E9E /* Firebase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD7F6F18286BA300FE0E9E /* Firebase.m */; };
-		7CFD7F7318286BA300FE0E9E /* FirebaseError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD7F7118286BA300FE0E9E /* FirebaseError.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,13 +72,23 @@
 		7C74BB8318284763008A63C0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		7C74BB851828476E008A63C0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7C74BB8718284778008A63C0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		7C84654218243DA300F35783 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
-		7C84654418243DA300F35783 /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Query.h; sourceTree = "<group>"; };
-		7C84654518243DA300F35783 /* Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Query.m; sourceTree = "<group>"; };
+		7C9F4F261828B06D006BEBC6 /* ChildEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildEventListener.h; sourceTree = "<group>"; };
+		7C9F4F271828B06D006BEBC6 /* ChildEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildEventListener.m; sourceTree = "<group>"; };
+		7C9F4F281828B06D006BEBC6 /* DataSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSnapshot.h; sourceTree = "<group>"; };
+		7C9F4F291828B06D006BEBC6 /* DataSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSnapshot.m; sourceTree = "<group>"; };
+		7C9F4F2A1828B06D006BEBC6 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		7C9F4F2B1828B06D006BEBC6 /* Firebase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Firebase.m; sourceTree = "<group>"; };
+		7C9F4F2C1828B06D006BEBC6 /* FirebaseError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseError.h; sourceTree = "<group>"; };
+		7C9F4F2D1828B06D006BEBC6 /* FirebaseError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseError.m; sourceTree = "<group>"; };
+		7C9F4F2E1828B06D006BEBC6 /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Query.h; sourceTree = "<group>"; };
+		7C9F4F2F1828B06D006BEBC6 /* Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Query.m; sourceTree = "<group>"; };
+		7C9F4F301828B06D006BEBC6 /* ValueEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueEventListener.h; sourceTree = "<group>"; };
+		7C9F4F311828B06D006BEBC6 /* ValueEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueEventListener.m; sourceTree = "<group>"; };
+		7C9F4F381828B342006BEBC6 /* WrappedValueEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrappedValueEventListener.h; sourceTree = "<group>"; };
+		7C9F4F391828B342006BEBC6 /* WrappedValueEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrappedValueEventListener.m; sourceTree = "<group>"; };
+		7C9F4F3B1828B551006BEBC6 /* TestPrintingListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPrintingListener.h; sourceTree = "<group>"; };
+		7C9F4F3C1828B551006BEBC6 /* TestPrintingListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPrintingListener.m; sourceTree = "<group>"; };
 		7CFD7F6D18285E9900FE0E9E /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
-		7CFD7F6F18286BA300FE0E9E /* Firebase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Firebase.m; path = ../../../out/Firebase.m; sourceTree = "<group>"; };
-		7CFD7F7018286BA300FE0E9E /* FirebaseError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirebaseError.h; path = ../../../out/FirebaseError.h; sourceTree = "<group>"; };
-		7CFD7F7118286BA300FE0E9E /* FirebaseError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirebaseError.m; path = ../../../out/FirebaseError.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +158,7 @@
 		7C187ED81824329E0082E0E2 /* Lagrange */ = {
 			isa = PBXGroup;
 			children = (
-				7C84654118243DA300F35783 /* out */,
+				7C9F4F251828B06D006BEBC6 /* out */,
 				7C187EE11824329E0082E0E2 /* AppDelegate.h */,
 				7C187EE21824329E0082E0E2 /* AppDelegate.m */,
 				7C187EE41824329E0082E0E2 /* Main_iPhone.storyboard */,
@@ -185,17 +200,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7C84654118243DA300F35783 /* out */ = {
+		7C9F4F251828B06D006BEBC6 /* out */ = {
 			isa = PBXGroup;
 			children = (
-				7CFD7F6F18286BA300FE0E9E /* Firebase.m */,
-				7CFD7F7018286BA300FE0E9E /* FirebaseError.h */,
-				7CFD7F7118286BA300FE0E9E /* FirebaseError.m */,
-				7C84654218243DA300F35783 /* Firebase.h */,
-				7C84654418243DA300F35783 /* Query.h */,
-				7C84654518243DA300F35783 /* Query.m */,
+				7C9F4F3B1828B551006BEBC6 /* TestPrintingListener.h */,
+				7C9F4F3C1828B551006BEBC6 /* TestPrintingListener.m */,
+				7C9F4F381828B342006BEBC6 /* WrappedValueEventListener.h */,
+				7C9F4F391828B342006BEBC6 /* WrappedValueEventListener.m */,
+				7C9F4F261828B06D006BEBC6 /* ChildEventListener.h */,
+				7C9F4F271828B06D006BEBC6 /* ChildEventListener.m */,
+				7C9F4F281828B06D006BEBC6 /* DataSnapshot.h */,
+				7C9F4F291828B06D006BEBC6 /* DataSnapshot.m */,
+				7C9F4F2A1828B06D006BEBC6 /* Firebase.h */,
+				7C9F4F2B1828B06D006BEBC6 /* Firebase.m */,
+				7C9F4F2C1828B06D006BEBC6 /* FirebaseError.h */,
+				7C9F4F2D1828B06D006BEBC6 /* FirebaseError.m */,
+				7C9F4F2E1828B06D006BEBC6 /* Query.h */,
+				7C9F4F2F1828B06D006BEBC6 /* Query.m */,
+				7C9F4F301828B06D006BEBC6 /* ValueEventListener.h */,
+				7C9F4F311828B06D006BEBC6 /* ValueEventListener.m */,
 			);
-			path = out;
+			name = out;
+			path = ../../out;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,12 +321,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C9F4F361828B06D006BEBC6 /* Query.m in Sources */,
+				7C9F4F371828B06D006BEBC6 /* ValueEventListener.m in Sources */,
 				7C187EEC1824329E0082E0E2 /* ViewController.m in Sources */,
+				7C9F4F3D1828B551006BEBC6 /* TestPrintingListener.m in Sources */,
 				7C187EE31824329E0082E0E2 /* AppDelegate.m in Sources */,
+				7C9F4F331828B06D006BEBC6 /* DataSnapshot.m in Sources */,
 				7C187EDF1824329E0082E0E2 /* main.m in Sources */,
-				7CFD7F7218286BA300FE0E9E /* Firebase.m in Sources */,
-				7CFD7F7318286BA300FE0E9E /* FirebaseError.m in Sources */,
-				7C84654718243DA300F35783 /* Query.m in Sources */,
+				7C9F4F341828B06D006BEBC6 /* Firebase.m in Sources */,
+				7C9F4F351828B06D006BEBC6 /* FirebaseError.m in Sources */,
+				7C9F4F3A1828B342006BEBC6 /* WrappedValueEventListener.m in Sources */,
+				7C9F4F321828B06D006BEBC6 /* ChildEventListener.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

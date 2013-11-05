@@ -29,6 +29,38 @@ public class Firebase extends Query {
     super(createFirebase(url));
   }
   
+  private static native Object createDictionary() /*-[
+    return [[NSMutableDictionary alloc] init];
+  ]-*/;
+  
+  private static native Object createArray() /*-[
+    return [[NSMutableArray alloc] init];
+  ]-*/;
+  
+  private static native void addToDictionary(Object dictionary, String key, Object value) /*-[
+    [dictionary setValue: value forKey: key];
+  ]-*/;
+  
+  private static native void addToArray(Object array, Object value) /*-[
+    [array addObject: value];
+  ]-*/;
+  
+  static Object convertMapToNsDictionary(@SuppressWarnings("rawtypes") Map map) {
+    Object dictionary = createDictionary();
+    for (Object key : map.keySet()) {
+      addToDictionary(dictionary, key.toString(), map.get(key));
+    }
+    return dictionary;
+  }
+  
+  static Object convertListToNsArray(@SuppressWarnings("rawtypes") List list) {
+    Object array = createArray();
+    for (Object value : list) {
+      addToArray(array, value);
+    }
+    return array;
+  }
+  
   public void setValue(Object value) {
     setValue(value, null, null);
   }
@@ -43,27 +75,19 @@ public class Firebase extends Query {
   
   public void setValue(Object value, Object priority, CompletionListener listener) {
     if (value == null || value instanceof Number || value instanceof String) {
-      setValueId(value);
+      setValueNative(value);
     } else if (value instanceof Boolean) {
-      setValueId(((Boolean)value).booleanValue());
+      setValueNative(((Boolean)value).booleanValue());
     } else if (value instanceof List) {
-      setValueList((List)value);
+      setValueNative(convertListToNsArray((List<?>)value));
     } else if (value instanceof Map) {
-      setValueMap((Map)value);
+      setValueNative(convertMapToNsDictionary((Map<?, ?>)value));
     }
   }
   
-  private native void setValueId(Object value) /*-[
+  private native void setValueNative(Object value) /*-[
     Firebase *firebase = self->firebase_;
     [firebase setValue: value];
-  ]-*/;
-  
-  private native void setValueList(List value) /*-[
-    Firebase *firebase = self->firebase_;
-  ]-*/;
-  
-  private native void setValueMap(Map value) /*-[
-    Firebase *firebase = self->firebase_;
   ]-*/;
   
 }

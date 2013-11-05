@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "Firebase.h"
+#import "DataSnapshot.h"
+#import "TestPrintingListener.h"
 #import <Firebase/Firebase.h>
 
 @implementation AppDelegate
@@ -18,7 +20,12 @@
     FCQuery *query = [[FCQuery alloc] init];
     [query helloWorld];
     FCFirebase *fc = [[FCFirebase alloc] initWithNSString: @"https://gwt.firebaseio.com/"];
-    [fc setValueWithId: @"dthurn was here"];
+    id list = [FCDataSnapshot convertNsArrayToListWithId: @[@1, @2, @3]];
+    id map = [FCDataSnapshot convertNsDictionaryToMapWithId: @{@"key1": @"value1", @"key2": @"value2"}];
+    id<FCValueEventListener> listener = [[FCTestPrintingListener alloc] init];
+    [fc addValueEventListenerWithFCValueEventListener: listener];
+    [fc setValueWithId: list];
+    NSLog(@"done");
     
 //    Firebase *f = [[Firebase alloc] initWithUrl:@"https://gwt.firebaseio.com/"];
 //    [f setValue:@"hi"];
