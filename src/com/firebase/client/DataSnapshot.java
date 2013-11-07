@@ -33,6 +33,8 @@ public class DataSnapshot {
     return result;
   ]-*/;
   
+  
+  
   public native Object getValue() /*-[
     FDataSnapshot *snapshot = self->snapshot_;
     return snapshot.value;

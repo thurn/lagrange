@@ -26,6 +26,29 @@
 		7C74BB8418284763008A63C0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C74BB8318284763008A63C0 /* CFNetwork.framework */; };
 		7C74BB861828476E008A63C0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C74BB851828476E008A63C0 /* Security.framework */; };
 		7C74BB8818284778008A63C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C74BB8718284778008A63C0 /* SystemConfiguration.framework */; };
+		7C84554A182ADF39007C53E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C187ED21824329E0082E0E2 /* Foundation.framework */; };
+		7C84554D182ADF39007C53E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C84554C182ADF39007C53E8 /* main.m */; };
+		7C845551182ADF39007C53E8 /* LagrangeJUnit.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7C845550182ADF39007C53E8 /* LagrangeJUnit.1 */; };
+		7C845556182AE1AA007C53E8 /* libjunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C845555182AE1AA007C53E8 /* libjunit.a */; };
+		7C84555F182B1873007C53E8 /* FirebaseTest.h in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1E911182A1FD40041FC21 /* FirebaseTest.h */; };
+		7C845560182B1873007C53E8 /* FirebaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1E912182A1FD40041FC21 /* FirebaseTest.m */; };
+		7C845561182B1873007C53E8 /* TestPrintingListener.h in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F3B1828B551006BEBC6 /* TestPrintingListener.h */; };
+		7C845562182B1873007C53E8 /* TestPrintingListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F3C1828B551006BEBC6 /* TestPrintingListener.m */; };
+		7C845563182B1873007C53E8 /* WrappedValueEventListener.h in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F381828B342006BEBC6 /* WrappedValueEventListener.h */; };
+		7C845564182B1873007C53E8 /* WrappedValueEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F391828B342006BEBC6 /* WrappedValueEventListener.m */; };
+		7C845565182B1873007C53E8 /* ChildEventListener.h in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F261828B06D006BEBC6 /* ChildEventListener.h */; };
+		7C845566182B1873007C53E8 /* ChildEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F271828B06D006BEBC6 /* ChildEventListener.m */; };
+		7C845567182B1873007C53E8 /* DataSnapshot.h in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F281828B06D006BEBC6 /* DataSnapshot.h */; };
+		7C845568182B1873007C53E8 /* DataSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F291828B06D006BEBC6 /* DataSnapshot.m */; };
+		7C845569182B1873007C53E8 /* Firebase.h in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F2A1828B06D006BEBC6 /* Firebase.h */; };
+		7C84556A182B1873007C53E8 /* Firebase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F2B1828B06D006BEBC6 /* Firebase.m */; };
+		7C84556B182B1873007C53E8 /* FirebaseError.h in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F2C1828B06D006BEBC6 /* FirebaseError.h */; };
+		7C84556C182B1873007C53E8 /* FirebaseError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F2D1828B06D006BEBC6 /* FirebaseError.m */; };
+		7C84556D182B1873007C53E8 /* Query.h in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F2E1828B06D006BEBC6 /* Query.h */; };
+		7C84556E182B1873007C53E8 /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F2F1828B06D006BEBC6 /* Query.m */; };
+		7C84556F182B1873007C53E8 /* ValueEventListener.h in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F301828B06D006BEBC6 /* ValueEventListener.h */; };
+		7C845570182B1873007C53E8 /* ValueEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F311828B06D006BEBC6 /* ValueEventListener.m */; };
+		7C845575182B19F1007C53E8 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFD7F6D18285E9900FE0E9E /* Firebase.framework */; };
 		7C9F4F321828B06D006BEBC6 /* ChildEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F271828B06D006BEBC6 /* ChildEventListener.m */; };
 		7C9F4F331828B06D006BEBC6 /* DataSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F291828B06D006BEBC6 /* DataSnapshot.m */; };
 		7C9F4F341828B06D006BEBC6 /* Firebase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F2B1828B06D006BEBC6 /* Firebase.m */; };
@@ -34,6 +57,8 @@
 		7C9F4F371828B06D006BEBC6 /* ValueEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F311828B06D006BEBC6 /* ValueEventListener.m */; };
 		7C9F4F3A1828B342006BEBC6 /* WrappedValueEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F391828B342006BEBC6 /* WrappedValueEventListener.m */; };
 		7C9F4F3D1828B551006BEBC6 /* TestPrintingListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F3C1828B551006BEBC6 /* TestPrintingListener.m */; };
+		7C9F4F6518295FCB006BEBC6 /* TRVSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F6418295FCB006BEBC6 /* TRVSMonitor.m */; };
+		7CC1E915182A1FD40041FC21 /* FirebaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1E912182A1FD40041FC21 /* FirebaseTest.m */; };
 		7CFD7F6E18285E9900FE0E9E /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFD7F6D18285E9900FE0E9E /* Firebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +71,19 @@
 			remoteInfo = Lagrange;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7C845547182ADF38007C53E8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				7C845551182ADF39007C53E8 /* LagrangeJUnit.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7C187ECF1824329E0082E0E2 /* Lagrange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lagrange.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +110,11 @@
 		7C74BB8318284763008A63C0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		7C74BB851828476E008A63C0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7C74BB8718284778008A63C0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7C845549182ADF39007C53E8 /* LagrangeJUnit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LagrangeJUnit; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C84554C182ADF39007C53E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7C84554F182ADF39007C53E8 /* LagrangeJUnit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LagrangeJUnit-Prefix.pch"; sourceTree = "<group>"; };
+		7C845550182ADF39007C53E8 /* LagrangeJUnit.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = LagrangeJUnit.1; sourceTree = "<group>"; };
+		7C845555182AE1AA007C53E8 /* libjunit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjunit.a; path = ../../../../../usr/local/j2objc/lib/libjunit.a; sourceTree = "<group>"; };
 		7C9F4F261828B06D006BEBC6 /* ChildEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildEventListener.h; sourceTree = "<group>"; };
 		7C9F4F271828B06D006BEBC6 /* ChildEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildEventListener.m; sourceTree = "<group>"; };
 		7C9F4F281828B06D006BEBC6 /* DataSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSnapshot.h; sourceTree = "<group>"; };
@@ -88,6 +131,11 @@
 		7C9F4F391828B342006BEBC6 /* WrappedValueEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrappedValueEventListener.m; sourceTree = "<group>"; };
 		7C9F4F3B1828B551006BEBC6 /* TestPrintingListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPrintingListener.h; sourceTree = "<group>"; };
 		7C9F4F3C1828B551006BEBC6 /* TestPrintingListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPrintingListener.m; sourceTree = "<group>"; };
+		7C9F4F6318295FCB006BEBC6 /* TRVSMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRVSMonitor.h; sourceTree = "<group>"; };
+		7C9F4F6418295FCB006BEBC6 /* TRVSMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRVSMonitor.m; sourceTree = "<group>"; };
+		7C9F4F661829669C006BEBC6 /* LagrangeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LagrangeTests.h; sourceTree = "<group>"; };
+		7CC1E911182A1FD40041FC21 /* FirebaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseTest.h; sourceTree = "<group>"; };
+		7CC1E912182A1FD40041FC21 /* FirebaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseTest.m; sourceTree = "<group>"; };
 		7CFD7F6D18285E9900FE0E9E /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +165,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7C845546182ADF38007C53E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C845575182B19F1007C53E8 /* Firebase.framework in Frameworks */,
+				7C845556182AE1AA007C53E8 /* libjunit.a in Frameworks */,
+				7C84554A182ADF39007C53E8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -125,6 +183,7 @@
 			children = (
 				7C187ED81824329E0082E0E2 /* Lagrange */,
 				7C187EFA1824329E0082E0E2 /* LagrangeTests */,
+				7C84554B182ADF39007C53E8 /* LagrangeJUnit */,
 				7C187ED11824329E0082E0E2 /* Frameworks */,
 				7C187ED01824329E0082E0E2 /* Products */,
 			);
@@ -135,6 +194,7 @@
 			children = (
 				7C187ECF1824329E0082E0E2 /* Lagrange.app */,
 				7C187EF31824329E0082E0E2 /* LagrangeTests.xctest */,
+				7C845549182ADF39007C53E8 /* LagrangeJUnit */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +202,7 @@
 		7C187ED11824329E0082E0E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C845555182AE1AA007C53E8 /* libjunit.a */,
 				7CFD7F6D18285E9900FE0E9E /* Firebase.framework */,
 				7C74BB8718284778008A63C0 /* SystemConfiguration.framework */,
 				7C74BB851828476E008A63C0 /* Security.framework */,
@@ -185,7 +246,10 @@
 		7C187EFA1824329E0082E0E2 /* LagrangeTests */ = {
 			isa = PBXGroup;
 			children = (
+				7C9F4F6318295FCB006BEBC6 /* TRVSMonitor.h */,
+				7C9F4F6418295FCB006BEBC6 /* TRVSMonitor.m */,
 				7C187F001824329E0082E0E2 /* LagrangeTests.m */,
+				7C9F4F661829669C006BEBC6 /* LagrangeTests.h */,
 				7C187EFB1824329E0082E0E2 /* Supporting Files */,
 			);
 			path = LagrangeTests;
@@ -200,9 +264,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7C84554B182ADF39007C53E8 /* LagrangeJUnit */ = {
+			isa = PBXGroup;
+			children = (
+				7C84554C182ADF39007C53E8 /* main.m */,
+				7C845550182ADF39007C53E8 /* LagrangeJUnit.1 */,
+				7C84554E182ADF39007C53E8 /* Supporting Files */,
+			);
+			path = LagrangeJUnit;
+			sourceTree = "<group>";
+		};
+		7C84554E182ADF39007C53E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C84554F182ADF39007C53E8 /* LagrangeJUnit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		7C9F4F251828B06D006BEBC6 /* out */ = {
 			isa = PBXGroup;
 			children = (
+				7CC1E911182A1FD40041FC21 /* FirebaseTest.h */,
+				7CC1E912182A1FD40041FC21 /* FirebaseTest.m */,
 				7C9F4F3B1828B551006BEBC6 /* TestPrintingListener.h */,
 				7C9F4F3C1828B551006BEBC6 /* TestPrintingListener.m */,
 				7C9F4F381828B342006BEBC6 /* WrappedValueEventListener.h */,
@@ -262,6 +346,23 @@
 			productReference = 7C187EF31824329E0082E0E2 /* LagrangeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7C845548182ADF38007C53E8 /* LagrangeJUnit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C845552182ADF39007C53E8 /* Build configuration list for PBXNativeTarget "LagrangeJUnit" */;
+			buildPhases = (
+				7C845545182ADF38007C53E8 /* Sources */,
+				7C845546182ADF38007C53E8 /* Frameworks */,
+				7C845547182ADF38007C53E8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LagrangeJUnit;
+			productName = LagrangeJUnit;
+			productReference = 7C845549182ADF39007C53E8 /* LagrangeJUnit */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -290,6 +391,7 @@
 			targets = (
 				7C187ECE1824329E0082E0E2 /* Lagrange */,
 				7C187EF21824329E0082E0E2 /* LagrangeTests */,
+				7C845548182ADF38007C53E8 /* LagrangeJUnit */,
 			);
 		};
 /* End PBXProject section */
@@ -323,6 +425,7 @@
 			files = (
 				7C9F4F361828B06D006BEBC6 /* Query.m in Sources */,
 				7C9F4F371828B06D006BEBC6 /* ValueEventListener.m in Sources */,
+				7CC1E915182A1FD40041FC21 /* FirebaseTest.m in Sources */,
 				7C187EEC1824329E0082E0E2 /* ViewController.m in Sources */,
 				7C9F4F3D1828B551006BEBC6 /* TestPrintingListener.m in Sources */,
 				7C187EE31824329E0082E0E2 /* AppDelegate.m in Sources */,
@@ -340,6 +443,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C187F011824329E0082E0E2 /* LagrangeTests.m in Sources */,
+				7C9F4F6518295FCB006BEBC6 /* TRVSMonitor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C845545182ADF38007C53E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C84555F182B1873007C53E8 /* FirebaseTest.h in Sources */,
+				7C845560182B1873007C53E8 /* FirebaseTest.m in Sources */,
+				7C845561182B1873007C53E8 /* TestPrintingListener.h in Sources */,
+				7C845562182B1873007C53E8 /* TestPrintingListener.m in Sources */,
+				7C845563182B1873007C53E8 /* WrappedValueEventListener.h in Sources */,
+				7C845564182B1873007C53E8 /* WrappedValueEventListener.m in Sources */,
+				7C845565182B1873007C53E8 /* ChildEventListener.h in Sources */,
+				7C845566182B1873007C53E8 /* ChildEventListener.m in Sources */,
+				7C845567182B1873007C53E8 /* DataSnapshot.h in Sources */,
+				7C845568182B1873007C53E8 /* DataSnapshot.m in Sources */,
+				7C845569182B1873007C53E8 /* Firebase.h in Sources */,
+				7C84556A182B1873007C53E8 /* Firebase.m in Sources */,
+				7C84556B182B1873007C53E8 /* FirebaseError.h in Sources */,
+				7C84556C182B1873007C53E8 /* FirebaseError.m in Sources */,
+				7C84556D182B1873007C53E8 /* Query.h in Sources */,
+				7C84556E182B1873007C53E8 /* Query.m in Sources */,
+				7C84556F182B1873007C53E8 /* ValueEventListener.h in Sources */,
+				7C845570182B1873007C53E8 /* ValueEventListener.m in Sources */,
+				7C84554D182ADF39007C53E8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,7 +667,20 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/j2objc/include,
+				);
 				INFOPLIST_FILE = "LagrangeTests/LagrangeTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L",
+					/usr/local/j2objc/lib,
+					"-l",
+					jre_emul,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -556,10 +699,92 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lagrange/Lagrange-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/j2objc/include,
+				);
 				INFOPLIST_FILE = "LagrangeTests/LagrangeTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-L",
+					/usr/local/j2objc/lib,
+					"-l",
+					jre_emul,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		7C845553182ADF39007C53E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/dthurn/Dropbox/lagrange/Lagrange,
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LagrangeJUnit/LagrangeJUnit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/j2objc/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/j2objc/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = (
+					"-L",
+					/usr/local/j2objc/lib,
+					"-l",
+					jre_emul,
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7C845554182ADF39007C53E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/dthurn/Dropbox/lagrange/Lagrange,
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LagrangeJUnit/LagrangeJUnit-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/j2objc/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/j2objc/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = (
+					"-L",
+					/usr/local/j2objc/lib,
+					"-l",
+					jre_emul,
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -589,6 +814,15 @@
 			buildConfigurations = (
 				7C187F081824329E0082E0E2 /* Debug */,
 				7C187F091824329E0082E0E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C845552182ADF39007C53E8 /* Build configuration list for PBXNativeTarget "LagrangeJUnit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C845553182ADF39007C53E8 /* Debug */,
+				7C845554182ADF39007C53E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

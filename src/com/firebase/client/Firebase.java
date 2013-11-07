@@ -29,6 +29,11 @@ public class Firebase extends Query {
     super(createFirebase(url));
   }
   
+  public native String getName() /*-[
+    Firebase *firebase = self->firebase_;
+    return firebase.name;
+  ]-*/;
+  
   private static native Object createDictionary() /*-[
     return [[NSMutableDictionary alloc] init];
   ]-*/;

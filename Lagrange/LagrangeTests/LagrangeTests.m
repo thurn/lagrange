@@ -6,11 +6,10 @@
 //
 //
 
-#import <XCTest/XCTest.h>
-
-@interface LagrangeTests : XCTestCase
-
-@end
+#include "LagrangeTests.h"
+#import "Firebase.h"
+#import "DataSnapshot.h"
+#include "java/lang/Long.h"
 
 @implementation LagrangeTests
 
@@ -28,7 +27,32 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    global_trvs_monitor = [[TRVSMonitor alloc] initWithExpectedSignalCount:1];
+    FCFirebase *firebase = [[FCFirebase alloc] initWithNSString:@"https://gwt.firebaseio.com"];
+    (void) [firebase addValueEventListenerWithFCValueEventListener:[[FCTemp_$1 alloc] init]];
+    [firebase setValueWithId:[JavaLangLong valueOfWithLong:123LL]];
+
+    BOOL signaled = [global_trvs_monitor waitWithTimeout: 10.0];
+    if (!signaled) {
+      XCTFail(@"Test timed out!");
+    }
+}
+
+@end
+
+@implementation FCTemp_$1
+
+- (void)onCancelled {
+}
+
+- (void)onDataChangeWithFCDataSnapshot:(FCDataSnapshot *)snapshot {
+    id value = [((FCDataSnapshot *) nil_chk(snapshot)) getValue];
+    [global_trvs_monitor signal];
+    [NSException raise:@"exception" format:@"string"];
+}
+
+- (id)init {
+    return [super init];
 }
 
 @end

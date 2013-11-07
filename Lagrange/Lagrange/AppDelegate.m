@@ -17,15 +17,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    FCQuery *query = [[FCQuery alloc] init];
-    [query helloWorld];
-    FCFirebase *fc = [[FCFirebase alloc] initWithNSString: @"https://gwt.firebaseio.com/"];
+    FCFirebase *fc = [[FCFirebase alloc] initWithNSString: @"https://gwt.firebaseio.com/name"];
     id list = [FCDataSnapshot convertNsArrayToListWithId: @[@1, @2, @3]];
     id map = [FCDataSnapshot convertNsDictionaryToMapWithId: @{@"key1": @"value1", @"key2": @"value2"}];
     id<FCValueEventListener> listener = [[FCTestPrintingListener alloc] init];
     [fc addValueEventListenerWithFCValueEventListener: listener];
     [fc setValueWithId: list];
-    NSLog(@"done");
+    NSLog(@"name: %@", [fc getName]);
     
 //    Firebase *f = [[Firebase alloc] initWithUrl:@"https://gwt.firebaseio.com/"];
 //    [f setValue:@"hi"];
