@@ -18,12 +18,32 @@ public class Query {
     System.out.println("Hello, world!");
   }
   
+  public native void addListenerForSingleValueEvent(ValueEventListener listener) /*-[
+    Firebase *firebase = self->firebase_;
+    void (^onDataChange)(FDataSnapshot*) = ^(FDataSnapshot *snapshot) {
+       FCDataSnapshot *javaSnapshot = [[FCDataSnapshot alloc] initWithId: snapshot];
+       [listener onDataChangeWithFCDataSnapshot: javaSnapshot];
+    };
+    void (^onCancel)() = ^{
+      [listener onCancelled];
+    };
+    [firebase observeSingleEventOfType: FEventTypeValue
+                             withBlock: onDataChange
+                       withCancelBlock: onCancel];
+  ]-*/;
+  
   public native ValueEventListener addValueEventListener(ValueEventListener listener) /*-[
     Firebase *firebase = self->firebase_;
-    FirebaseHandle handle = [firebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-      FCDataSnapshot *javaSnapshot = [[FCDataSnapshot alloc] initWithId: snapshot]; 
+    void (^onDataChange)(FDataSnapshot*) = ^(FDataSnapshot *snapshot) {
+      FCDataSnapshot *javaSnapshot = [[FCDataSnapshot alloc] initWithId: snapshot];
       [listener onDataChangeWithFCDataSnapshot: javaSnapshot];
-    }];
+    };
+    void (^onCancel)() = ^{
+      [listener onCancelled];
+    };
+    FirebaseHandle handle = [firebase observeEventType: FEventTypeValue
+                                             withBlock: onDataChange
+                                       withCancelBlock: onCancel];
     id<FCValueEventListener> result = [[FCWrappedValueEventListener alloc] initWithLong: handle];
     return result;
   ]-*/;

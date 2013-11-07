@@ -44,6 +44,8 @@
 		7C84556F182B1873007C53E8 /* ValueEventListener.h in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F301828B06D006BEBC6 /* ValueEventListener.h */; };
 		7C845570182B1873007C53E8 /* ValueEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F311828B06D006BEBC6 /* ValueEventListener.m */; };
 		7C845575182B19F1007C53E8 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFD7F6D18285E9900FE0E9E /* Firebase.framework */; };
+		7C845577182C1C16007C53E8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C845576182C1C16007C53E8 /* CFNetwork.framework */; };
+		7C845579182C1C2A007C53E8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C845578182C1C2A007C53E8 /* Security.framework */; };
 		7C9F4F321828B06D006BEBC6 /* ChildEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F271828B06D006BEBC6 /* ChildEventListener.m */; };
 		7C9F4F331828B06D006BEBC6 /* DataSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F291828B06D006BEBC6 /* DataSnapshot.m */; };
 		7C9F4F341828B06D006BEBC6 /* Firebase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F2B1828B06D006BEBC6 /* Firebase.m */; };
@@ -103,6 +105,8 @@
 		7C84554F182ADF39007C53E8 /* LagrangeJUnit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LagrangeJUnit-Prefix.pch"; sourceTree = "<group>"; };
 		7C845550182ADF39007C53E8 /* LagrangeJUnit.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = LagrangeJUnit.1; sourceTree = "<group>"; };
 		7C845555182AE1AA007C53E8 /* libjunit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjunit.a; path = ../../../../../usr/local/j2objc/lib/libjunit.a; sourceTree = "<group>"; };
+		7C845576182C1C16007C53E8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		7C845578182C1C2A007C53E8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		7C9F4F261828B06D006BEBC6 /* ChildEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildEventListener.h; sourceTree = "<group>"; };
 		7C9F4F271828B06D006BEBC6 /* ChildEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildEventListener.m; sourceTree = "<group>"; };
 		7C9F4F281828B06D006BEBC6 /* DataSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSnapshot.h; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C845579182C1C2A007C53E8 /* Security.framework in Frameworks */,
+				7C845577182C1C16007C53E8 /* CFNetwork.framework in Frameworks */,
 				7C845575182B19F1007C53E8 /* Firebase.framework in Frameworks */,
 				7C845556182AE1AA007C53E8 /* libjunit.a in Frameworks */,
 				7C84554A182ADF39007C53E8 /* Foundation.framework in Frameworks */,
@@ -181,6 +187,8 @@
 		7C187ED11824329E0082E0E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C845578182C1C2A007C53E8 /* Security.framework */,
+				7C845576182C1C16007C53E8 /* CFNetwork.framework */,
 				7C845555182AE1AA007C53E8 /* libjunit.a */,
 				7CFD7F6D18285E9900FE0E9E /* Firebase.framework */,
 				7C74BB8718284778008A63C0 /* SystemConfiguration.framework */,

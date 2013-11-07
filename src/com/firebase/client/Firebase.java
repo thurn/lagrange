@@ -80,19 +80,32 @@ public class Firebase extends Query {
   
   public void setValue(Object value, Object priority, CompletionListener listener) {
     if (value == null || value instanceof Number || value instanceof String) {
-      setValueNative(value);
+      setValueNative(value, priority);
     } else if (value instanceof Boolean) {
-      setValueNative(((Boolean)value).booleanValue());
+      Object bool = booleanToBool((Boolean)value);
+      setValueNative(bool, priority);
     } else if (value instanceof List) {
-      setValueNative(convertListToNsArray((List<?>)value));
+      setValueNative(convertListToNsArray((List<?>)value), priority);
     } else if (value instanceof Map) {
-      setValueNative(convertMapToNsDictionary((Map<?, ?>)value));
+      setValueNative(convertMapToNsDictionary((Map<?, ?>)value), priority);
     }
   }
   
-  private native void setValueNative(Object value) /*-[
+  private native Object booleanToBool(Boolean value) /*-[
+    if ([value booleanValue]) {
+      return @YES;
+    } else {
+      return @NO;
+    }
+  ]-*/;
+  
+  private native void setValueNative(Object value, Object priority) /*-[
     Firebase *firebase = self->firebase_;
-    [firebase setValue: value];
+    if (priority == nil) {
+      [firebase setValue: value];
+    } else {
+      [firebase setValue:value andPriority:priority];
+    }
   ]-*/;
   
 }
