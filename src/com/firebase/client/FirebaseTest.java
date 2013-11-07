@@ -1,9 +1,10 @@
 package com.firebase.client;
 
-import junit.framework.TestCase;
 import org.junit.runner.JUnitCore;
 
-class FirebaseTest extends TestCase {
+import ca.thurn.gwt.SharedGWTTestCase;
+
+class FirebaseTest extends SharedGWTTestCase {
 
   Firebase firebase;
   
@@ -11,14 +12,36 @@ class FirebaseTest extends TestCase {
     JUnitCore.main("FCFirebaseTest");
   }
   
+  static abstract class TestValueEventListener implements ValueEventListener {
+    @Override
+    public void onCancelled() {
+      fail("Unexpected cancellation");
+    }
+  }
+  
   @Override
   protected void setUp() throws Exception {
     super.setUp();
     firebase = new Firebase("https://www.example.com");
   }
-  
-  public void testFoo() {
-    assertEquals(3, 2 + 2);
+
+  public void testGetName() {
+    Firebase firebase = new Firebase("http://www.example.com/foo");
+    assertEquals("foo", firebase.getName());
+  }
+
+  public void testSetValue() {
+    beginAsyncTestBlock();
+    final Firebase child = new Firebase("http://www.example.com/bar");
+    child.addValueEventListener(new TestValueEventListener() {
+      @Override
+      public void onDataChange(DataSnapshot snapshot) {
+        assertDeepEquals("values do not match", "object", snapshot.getValue());
+        finished();
+      }
+    });
+    child.setValue("object");
+    endAsyncTestBlock();
   }
 
 }

@@ -17,11 +17,6 @@
 		7C187EE91824329E0082E0E2 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C187EE71824329E0082E0E2 /* Main_iPad.storyboard */; };
 		7C187EEC1824329E0082E0E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C187EEB1824329E0082E0E2 /* ViewController.m */; };
 		7C187EEE1824329E0082E0E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C187EED1824329E0082E0E2 /* Images.xcassets */; };
-		7C187EF51824329E0082E0E2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C187EF41824329E0082E0E2 /* XCTest.framework */; };
-		7C187EF61824329E0082E0E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C187ED21824329E0082E0E2 /* Foundation.framework */; };
-		7C187EF71824329E0082E0E2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C187ED61824329E0082E0E2 /* UIKit.framework */; };
-		7C187EFF1824329E0082E0E2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C187EFD1824329E0082E0E2 /* InfoPlist.strings */; };
-		7C187F011824329E0082E0E2 /* LagrangeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C187F001824329E0082E0E2 /* LagrangeTests.m */; };
 		7C74BB821828475C008A63C0 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C74BB811828475C008A63C0 /* libicucore.dylib */; };
 		7C74BB8418284763008A63C0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C74BB8318284763008A63C0 /* CFNetwork.framework */; };
 		7C74BB861828476E008A63C0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C74BB851828476E008A63C0 /* Security.framework */; };
@@ -57,20 +52,14 @@
 		7C9F4F371828B06D006BEBC6 /* ValueEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F311828B06D006BEBC6 /* ValueEventListener.m */; };
 		7C9F4F3A1828B342006BEBC6 /* WrappedValueEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F391828B342006BEBC6 /* WrappedValueEventListener.m */; };
 		7C9F4F3D1828B551006BEBC6 /* TestPrintingListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F3C1828B551006BEBC6 /* TestPrintingListener.m */; };
-		7C9F4F6518295FCB006BEBC6 /* TRVSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F4F6418295FCB006BEBC6 /* TRVSMonitor.m */; };
 		7CC1E915182A1FD40041FC21 /* FirebaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1E912182A1FD40041FC21 /* FirebaseTest.m */; };
+		7CCB8AAB182B6A3D00FDF1D7 /* SharedGWTTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB8AAA182B6A3D00FDF1D7 /* SharedGWTTestCase.m */; };
+		7CCB8AAC182B6A6200FDF1D7 /* SharedGWTTestCase.h in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB8AA9182B6A3D00FDF1D7 /* SharedGWTTestCase.h */; };
+		7CCB8AAD182B6A6200FDF1D7 /* SharedGWTTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB8AAA182B6A3D00FDF1D7 /* SharedGWTTestCase.m */; };
+		7CCB8AB0182B6C8D00FDF1D7 /* TRVSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB8AAE182B6C8D00FDF1D7 /* TRVSMonitor.m */; };
+		7CCB8AB1182B6CF800FDF1D7 /* TRVSMonitor.h in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB8AAF182B6C8D00FDF1D7 /* TRVSMonitor.h */; };
 		7CFD7F6E18285E9900FE0E9E /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFD7F6D18285E9900FE0E9E /* Firebase.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7C187EF81824329E0082E0E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C187EC71824329E0082E0E2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7C187ECE1824329E0082E0E2;
-			remoteInfo = Lagrange;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7C845547182ADF38007C53E8 /* CopyFiles */ = {
@@ -101,7 +90,6 @@
 		7C187EEA1824329E0082E0E2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7C187EEB1824329E0082E0E2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7C187EED1824329E0082E0E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		7C187EF31824329E0082E0E2 /* LagrangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LagrangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C187EF41824329E0082E0E2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7C187EFC1824329E0082E0E2 /* LagrangeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LagrangeTests-Info.plist"; sourceTree = "<group>"; };
 		7C187EFE1824329E0082E0E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -131,11 +119,13 @@
 		7C9F4F391828B342006BEBC6 /* WrappedValueEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrappedValueEventListener.m; sourceTree = "<group>"; };
 		7C9F4F3B1828B551006BEBC6 /* TestPrintingListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPrintingListener.h; sourceTree = "<group>"; };
 		7C9F4F3C1828B551006BEBC6 /* TestPrintingListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPrintingListener.m; sourceTree = "<group>"; };
-		7C9F4F6318295FCB006BEBC6 /* TRVSMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRVSMonitor.h; sourceTree = "<group>"; };
-		7C9F4F6418295FCB006BEBC6 /* TRVSMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRVSMonitor.m; sourceTree = "<group>"; };
 		7C9F4F661829669C006BEBC6 /* LagrangeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LagrangeTests.h; sourceTree = "<group>"; };
 		7CC1E911182A1FD40041FC21 /* FirebaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseTest.h; sourceTree = "<group>"; };
 		7CC1E912182A1FD40041FC21 /* FirebaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseTest.m; sourceTree = "<group>"; };
+		7CCB8AA9182B6A3D00FDF1D7 /* SharedGWTTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedGWTTestCase.h; sourceTree = "<group>"; };
+		7CCB8AAA182B6A3D00FDF1D7 /* SharedGWTTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedGWTTestCase.m; sourceTree = "<group>"; };
+		7CCB8AAE182B6C8D00FDF1D7 /* TRVSMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRVSMonitor.m; sourceTree = "<group>"; };
+		7CCB8AAF182B6C8D00FDF1D7 /* TRVSMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRVSMonitor.h; sourceTree = "<group>"; };
 		7CFD7F6D18285E9900FE0E9E /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,16 +142,6 @@
 				7C187ED71824329E0082E0E2 /* UIKit.framework in Frameworks */,
 				7C187ED31824329E0082E0E2 /* Foundation.framework in Frameworks */,
 				7CFD7F6E18285E9900FE0E9E /* Firebase.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7C187EF01824329E0082E0E2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C187EF51824329E0082E0E2 /* XCTest.framework in Frameworks */,
-				7C187EF71824329E0082E0E2 /* UIKit.framework in Frameworks */,
-				7C187EF61824329E0082E0E2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				7C187ECF1824329E0082E0E2 /* Lagrange.app */,
-				7C187EF31824329E0082E0E2 /* LagrangeTests.xctest */,
 				7C845549182ADF39007C53E8 /* LagrangeJUnit */,
 			);
 			name = Products;
@@ -246,8 +225,6 @@
 		7C187EFA1824329E0082E0E2 /* LagrangeTests */ = {
 			isa = PBXGroup;
 			children = (
-				7C9F4F6318295FCB006BEBC6 /* TRVSMonitor.h */,
-				7C9F4F6418295FCB006BEBC6 /* TRVSMonitor.m */,
 				7C187F001824329E0082E0E2 /* LagrangeTests.m */,
 				7C9F4F661829669C006BEBC6 /* LagrangeTests.h */,
 				7C187EFB1824329E0082E0E2 /* Supporting Files */,
@@ -267,6 +244,8 @@
 		7C84554B182ADF39007C53E8 /* LagrangeJUnit */ = {
 			isa = PBXGroup;
 			children = (
+				7CCB8AAE182B6C8D00FDF1D7 /* TRVSMonitor.m */,
+				7CCB8AAF182B6C8D00FDF1D7 /* TRVSMonitor.h */,
 				7C84554C182ADF39007C53E8 /* main.m */,
 				7C845550182ADF39007C53E8 /* LagrangeJUnit.1 */,
 				7C84554E182ADF39007C53E8 /* Supporting Files */,
@@ -285,6 +264,8 @@
 		7C9F4F251828B06D006BEBC6 /* out */ = {
 			isa = PBXGroup;
 			children = (
+				7CCB8AA9182B6A3D00FDF1D7 /* SharedGWTTestCase.h */,
+				7CCB8AAA182B6A3D00FDF1D7 /* SharedGWTTestCase.m */,
 				7CC1E911182A1FD40041FC21 /* FirebaseTest.h */,
 				7CC1E912182A1FD40041FC21 /* FirebaseTest.m */,
 				7C9F4F3B1828B551006BEBC6 /* TestPrintingListener.h */,
@@ -328,24 +309,6 @@
 			productReference = 7C187ECF1824329E0082E0E2 /* Lagrange.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7C187EF21824329E0082E0E2 /* LagrangeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7C187F071824329E0082E0E2 /* Build configuration list for PBXNativeTarget "LagrangeTests" */;
-			buildPhases = (
-				7C187EEF1824329E0082E0E2 /* Sources */,
-				7C187EF01824329E0082E0E2 /* Frameworks */,
-				7C187EF11824329E0082E0E2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7C187EF91824329E0082E0E2 /* PBXTargetDependency */,
-			);
-			name = LagrangeTests;
-			productName = LagrangeTests;
-			productReference = 7C187EF31824329E0082E0E2 /* LagrangeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		7C845548182ADF38007C53E8 /* LagrangeJUnit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C845552182ADF39007C53E8 /* Build configuration list for PBXNativeTarget "LagrangeJUnit" */;
@@ -370,11 +333,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
-				TargetAttributes = {
-					7C187EF21824329E0082E0E2 = {
-						TestTargetID = 7C187ECE1824329E0082E0E2;
-					};
-				};
 			};
 			buildConfigurationList = 7C187ECA1824329E0082E0E2 /* Build configuration list for PBXProject "Lagrange" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -390,7 +348,6 @@
 			projectRoot = "";
 			targets = (
 				7C187ECE1824329E0082E0E2 /* Lagrange */,
-				7C187EF21824329E0082E0E2 /* LagrangeTests */,
 				7C845548182ADF38007C53E8 /* LagrangeJUnit */,
 			);
 		};
@@ -408,14 +365,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7C187EF11824329E0082E0E2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C187EFF1824329E0082E0E2 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -430,6 +379,7 @@
 				7C9F4F3D1828B551006BEBC6 /* TestPrintingListener.m in Sources */,
 				7C187EE31824329E0082E0E2 /* AppDelegate.m in Sources */,
 				7C9F4F331828B06D006BEBC6 /* DataSnapshot.m in Sources */,
+				7CCB8AAB182B6A3D00FDF1D7 /* SharedGWTTestCase.m in Sources */,
 				7C187EDF1824329E0082E0E2 /* main.m in Sources */,
 				7C9F4F341828B06D006BEBC6 /* Firebase.m in Sources */,
 				7C9F4F351828B06D006BEBC6 /* FirebaseError.m in Sources */,
@@ -438,19 +388,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7C187EEF1824329E0082E0E2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C187F011824329E0082E0E2 /* LagrangeTests.m in Sources */,
-				7C9F4F6518295FCB006BEBC6 /* TRVSMonitor.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7C845545182ADF38007C53E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CCB8AAC182B6A6200FDF1D7 /* SharedGWTTestCase.h in Sources */,
+				7CCB8AAD182B6A6200FDF1D7 /* SharedGWTTestCase.m in Sources */,
 				7C84555F182B1873007C53E8 /* FirebaseTest.h in Sources */,
 				7C845560182B1873007C53E8 /* FirebaseTest.m in Sources */,
 				7C845561182B1873007C53E8 /* TestPrintingListener.h in Sources */,
@@ -467,6 +410,8 @@
 				7C84556C182B1873007C53E8 /* FirebaseError.m in Sources */,
 				7C84556D182B1873007C53E8 /* Query.h in Sources */,
 				7C84556E182B1873007C53E8 /* Query.m in Sources */,
+				7CCB8AB0182B6C8D00FDF1D7 /* TRVSMonitor.m in Sources */,
+				7CCB8AB1182B6CF800FDF1D7 /* TRVSMonitor.h in Sources */,
 				7C84556F182B1873007C53E8 /* ValueEventListener.h in Sources */,
 				7C845570182B1873007C53E8 /* ValueEventListener.m in Sources */,
 				7C84554D182ADF39007C53E8 /* main.m in Sources */,
@@ -474,14 +419,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7C187EF91824329E0082E0E2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7C187ECE1824329E0082E0E2 /* Lagrange */;
-			targetProxy = 7C187EF81824329E0082E0E2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7C187EDB1824329E0082E0E2 /* InfoPlist.strings */ = {
@@ -651,74 +588,6 @@
 			};
 			name = Release;
 		};
-		7C187F081824329E0082E0E2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Lagrange.app/Lagrange";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lagrange/Lagrange-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					/usr/local/j2objc/include,
-				);
-				INFOPLIST_FILE = "LagrangeTests/LagrangeTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-L",
-					/usr/local/j2objc/lib,
-					"-l",
-					jre_emul,
-					"-ObjC",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		7C187F091824329E0082E0E2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Lagrange.app/Lagrange";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lagrange/Lagrange-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					/usr/local/j2objc/include,
-				);
-				INFOPLIST_FILE = "LagrangeTests/LagrangeTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-L",
-					/usr/local/j2objc/lib,
-					"-l",
-					jre_emul,
-					"-ObjC",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 		7C845553182ADF39007C53E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -805,15 +674,6 @@
 			buildConfigurations = (
 				7C187F051824329E0082E0E2 /* Debug */,
 				7C187F061824329E0082E0E2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7C187F071824329E0082E0E2 /* Build configuration list for PBXNativeTarget "LagrangeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7C187F081824329E0082E0E2 /* Debug */,
-				7C187F091824329E0082E0E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
