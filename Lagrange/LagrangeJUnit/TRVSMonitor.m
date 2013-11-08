@@ -23,8 +23,8 @@
 #import "TRVSMonitor.h"
 
 @implementation TRVSMonitor {
-    int _signalsRemaining;
-    int _expectedSignalCount;
+    long long int _signalsRemaining;
+    long long int _expectedSignalCount;
 }
 
 + (instancetype)monitor {

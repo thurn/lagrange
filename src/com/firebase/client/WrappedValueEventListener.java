@@ -17,5 +17,9 @@ class WrappedValueEventListener implements ValueEventListener {
   public void onDataChange(DataSnapshot snapshot) {
     throw new RuntimeException("You cannot re-use the listener you get back from addValueEventListener()");
   }
+  
+  long getHandle() {
+    return handle;
+  }
 
 }

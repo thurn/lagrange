@@ -28,12 +28,7 @@ public class Firebase extends Query {
   public Firebase(String url) {
     super(createFirebase(url));
   }
-  
-  public native String getName() /*-[
-    Firebase *firebase = self->firebase_;
-    return firebase.name;
-  ]-*/;
-  
+
   private static native Object createDictionary() /*-[
     return [[NSMutableDictionary alloc] init];
   ]-*/;
@@ -53,7 +48,7 @@ public class Firebase extends Query {
   static Object convertMapToNsDictionary(@SuppressWarnings("rawtypes") Map map) {
     Object dictionary = createDictionary();
     for (Object key : map.keySet()) {
-      addToDictionary(dictionary, key.toString(), map.get(key));
+      addToDictionary(dictionary, key.toString(), convertValue(map.get(key)));
     }
     return dictionary;
   }
@@ -61,10 +56,58 @@ public class Firebase extends Query {
   static Object convertListToNsArray(@SuppressWarnings("rawtypes") List list) {
     Object array = createArray();
     for (Object value : list) {
-      addToArray(array, value);
+      addToArray(array, convertValue(value));
     }
     return array;
   }
+  
+  private static Object convertValue(Object value) {
+    if (value == null || value instanceof Number || value instanceof String) {
+      return value;
+    } else if (value instanceof Boolean) {
+      return booleanToBool((Boolean)value);
+    } else if (value instanceof List) {
+      return convertListToNsArray((List<?>)value);
+    } else if (value instanceof Map) {
+      return convertMapToNsDictionary((Map<?, ?>)value);
+    } else {
+      throw new IllegalArgumentException("Can't convert value " + value);
+    }
+  }
+  
+  private static native Object booleanToBool(Boolean value) /*-[
+    if ([value booleanValue]) {
+      return @YES;
+    } else {
+      return @NO;
+    }
+  ]-*/;
+  
+  private native Object wrapCompletionListener(CompletionListener listener) /*-[
+    return ^(NSError *error, Firebase *ref) {
+      [listener onCompleteWithFCFirebaseError: [[FCFirebaseError alloc] initWithId: error]];
+    };
+  ]-*/;
+  
+  public native String getName() /*-[
+    Firebase *firebase = self->firebase_;
+    return firebase.name;
+  ]-*/;
+  
+  public native Firebase child(String pathString) /*-[
+    Firebase *firebase = self->firebase_;
+    return [[FCFirebase alloc] initWithId: [firebase childByAppendingPath: pathString]];
+  ]-*/;
+  
+  public native Firebase getParent() /*-[
+    Firebase *firebase = self->firebase_;
+    return [[FCFirebase alloc] initWithId: firebase.parent];
+  ]-*/;
+  
+  public native Firebase getRoot() /*-[
+    Firebase *firebase = self->firebase_;
+    return [[FCFirebase alloc] initWithId: firebase.root];
+  ]-*/;
   
   public void setValue(Object value) {
     setValue(value, null, null);
@@ -79,32 +122,74 @@ public class Firebase extends Query {
   }
   
   public void setValue(Object value, Object priority, CompletionListener listener) {
-    if (value == null || value instanceof Number || value instanceof String) {
-      setValueNative(value, priority);
-    } else if (value instanceof Boolean) {
-      Object bool = booleanToBool((Boolean)value);
-      setValueNative(bool, priority);
-    } else if (value instanceof List) {
-      setValueNative(convertListToNsArray((List<?>)value), priority);
-    } else if (value instanceof Map) {
-      setValueNative(convertMapToNsDictionary((Map<?, ?>)value), priority);
-    }
+    setValueNative(convertValue(value), convertValue(priority), wrapCompletionListener(listener));
   }
   
-  private native Object booleanToBool(Boolean value) /*-[
-    if ([value booleanValue]) {
-      return @YES;
+  public void updateChildren(Map<String, Object> children) {
+    updateChildren(children, null);
+  }
+  
+  public void updateChildren(Map<String, Object> children, CompletionListener listener) {
+    updateChildrenNative(convertMapToNsDictionary(children), wrapCompletionListener(listener));
+  }
+  
+  private native void updateChildrenNative(Object map, Object listener) /*-[
+    Firebase *firebase = self->firebase_;
+    if (listener == nil) {
+      [firebase updateChildValues: map];
     } else {
-      return @NO;
+      [firebase updateChildValues: map withCompletionBlock: listener];
     }
   ]-*/;
   
-  private native void setValueNative(Object value, Object priority) /*-[
+  private native void setValueNative(Object value, Object priority, Object listener) /*-[
     Firebase *firebase = self->firebase_;
-    if (priority == nil) {
-      [firebase setValue: value];
+    if (listener == nil) {
+      if (priority == nil) {
+        [firebase setValue: value];
+      } else {
+        [firebase setValue:value andPriority: priority];
+      }
     } else {
-      [firebase setValue:value andPriority:priority];
+      if (priority == nil) {
+        [firebase setValue: value withCompletionBlock: listener];
+      } else {
+        [firebase setValue:value andPriority: priority withCompletionBlock: listener];
+      }
+    }
+  ]-*/;
+  
+  public void removeValue() {
+    removeValue(null);
+  }
+  
+  public void removeValue(CompletionListener listener) {
+    removeValueNative(wrapCompletionListener(listener));
+  }
+  
+  public native void removeValueNative(Object listener) /*-[
+    Firebase *firebase = self->firebase_;
+    if (listener == nil) {
+      [firebase removeValue];
+    } else {
+      [firebase removeValueWithCompletionBlock: listener];
+    }
+  ]-*/;
+  
+  public void setPriority(Object priority) {
+    setPriority(priority, null);
+  }
+
+  public void setPriority(Object priority, CompletionListener listener) {
+    setPriorityNative(convertValue(priority), wrapCompletionListener(listener));
+  }
+  
+  private native void setPriorityNative(Object priority, Object listener) /*-[
+    Firebase *firebase = self->firebase_;
+    if (listener == nil) {
+      [firebase setPriority: priority];
+    } else {
+      [firebase setPriority: priority withCompletionBlock: listener];
     }
   ]-*/;
   

@@ -2,6 +2,7 @@ package ca.thurn.gwt;
 
 import java.util.Iterator;
 import java.util.Map;
+import java.util.TimerTask;
 
 import junit.framework.TestCase;
 
@@ -63,6 +64,12 @@ public abstract class SharedGWTTestCase extends TestCase {
   ]-*/;
 
   public void schedule(int delayMillis, final Runnable runnable) {
+    new java.util.Timer().schedule(new TimerTask() {
+      @Override
+      public void run() {
+        runnable.run();
+      }
+    }, delayMillis);    
   }
 
   public int randomInteger() {
