@@ -26,6 +26,11 @@ public abstract class SharedGWTTestCase extends TestCase {
     JAVASCRIPT,
     OBJECTIVE_C
   }
+  
+  public void gwtSetUp() {
+  }
+  
+  public abstract String getModuleName();
 
   public void injectScript(String url) {
     injectScript(url, null);

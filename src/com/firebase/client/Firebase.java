@@ -5,6 +5,9 @@ import java.util.Map;
 
 /*-[
 #import <Firebase/Firebase.h>
+#include "MutableData.h"
+#include "Transaction.h"
+#include "DataSnapshot.h"
 ]-*/
 
 public class Firebase extends Query {
@@ -48,7 +51,7 @@ public class Firebase extends Query {
   static Object convertMapToNsDictionary(@SuppressWarnings("rawtypes") Map map) {
     Object dictionary = createDictionary();
     for (Object key : map.keySet()) {
-      addToDictionary(dictionary, key.toString(), convertValue(map.get(key)));
+      addToDictionary(dictionary, key.toString(), convertToObjcValue(map.get(key)));
     }
     return dictionary;
   }
@@ -56,12 +59,12 @@ public class Firebase extends Query {
   static Object convertListToNsArray(@SuppressWarnings("rawtypes") List list) {
     Object array = createArray();
     for (Object value : list) {
-      addToArray(array, convertValue(value));
+      addToArray(array, convertToObjcValue(value));
     }
     return array;
   }
   
-  private static Object convertValue(Object value) {
+  static Object convertToObjcValue(Object value) {
     if (value == null || value instanceof Number || value instanceof String) {
       return value;
     } else if (value instanceof Boolean) {
@@ -122,7 +125,7 @@ public class Firebase extends Query {
   }
   
   public void setValue(Object value, Object priority, CompletionListener listener) {
-    setValueNative(convertValue(value), convertValue(priority), wrapCompletionListener(listener));
+    setValueNative(convertToObjcValue(value), convertToObjcValue(priority), wrapCompletionListener(listener));
   }
   
   public void updateChildren(Map<String, Object> children) {
@@ -181,7 +184,7 @@ public class Firebase extends Query {
   }
 
   public void setPriority(Object priority, CompletionListener listener) {
-    setPriorityNative(convertValue(priority), wrapCompletionListener(listener));
+    setPriorityNative(convertToObjcValue(priority), wrapCompletionListener(listener));
   }
   
   private native void setPriorityNative(Object priority, Object listener) /*-[
@@ -191,6 +194,32 @@ public class Firebase extends Query {
     } else {
       [firebase setPriority: priority withCompletionBlock: listener];
     }
+  ]-*/;
+  
+  public void runTransaction(Transaction.Handler handler) {
+    runTransaction(handler, true);
+  }
+
+  public native void runTransaction(Transaction.Handler handler, boolean fireLocalEvents) /*-[
+    Firebase *firebase = self->firebase_;
+    FTransactionResult* (^transactionBlock)(FMutableData*) = ^(FMutableData *currentData) {
+      FCMutableData *javaMutableData = [[FCMutableData alloc] initWithId: currentData];
+      FCTransaction_Result *result = [handler doTransactionWithFCMutableData: javaMutableData];
+      if ([result isSuccess]) {
+        return [FTransactionResult successWithValue: [result getResultData]];
+      } else {
+        return [FTransactionResult abort];
+      }
+    };
+    void (^completionBlock)(NSError*, BOOL, FDataSnapshot*) =
+        ^(NSError *error, BOOL committed, FDataSnapshot *snapshot) {
+      [handler onCompleteWithFCFirebaseError: [[FCFirebaseError alloc] initWithId: error]
+                                 withBoolean: committed
+                          withFCDataSnapshot: [[FCDataSnapshot alloc] initWithId: snapshot]];
+    };
+    [firebase runTransactionBlock: transactionBlock
+               andCompletionBlock: completionBlock
+                  withLocalEvents: fireLocalEvents];
   ]-*/;
   
 }

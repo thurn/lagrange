@@ -8,13 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "FirebaseTest.h"
-
+#include "org/junit/runner/JUnitCore.h"
 
 int main(int argc, const char * argv[])
 {
-
-    @autoreleasepool {
-        [FCFirebaseTest runTests];
-    }
-    return 0;
+  @autoreleasepool {
+    [FCFirebaseTest runJUnit];
+  }
+  return 0;
 }

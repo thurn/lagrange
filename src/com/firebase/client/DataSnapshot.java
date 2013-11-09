@@ -30,24 +30,24 @@ public class DataSnapshot {
     this.snapshot = snapshot;
   }
   
-  native Map<String, Object> convertNsDictionaryToMap(Object dictionary) /*-[
+  native static Map<String, Object> convertNsDictionaryToMap(Object dictionary) /*-[
     id<JavaUtilMap> result = [[JavaUtilHashMap alloc] init];
       for (id key in dictionary) {
-        id value = [self convertToJavaObjectWithId: [dictionary objectForKey: key]];
+        id value = [FCDataSnapshot convertToJavaObjectWithId: [dictionary objectForKey: key]];
         [result putWithId: key withId: value];
       }
     return result;
   ]-*/;
   
-  native List<Object> convertNsArrayToList(Object array) /*-[
+  native static List<Object> convertNsArrayToList(Object array) /*-[
     id<JavaUtilList> result = [[JavaUtilArrayList alloc] init];
       for (id value in array) {
-        [result addWithId: [self convertToJavaObjectWithId: value]];
+        [result addWithId: [FCDataSnapshot convertToJavaObjectWithId: value]];
       }
     return result;
   ]-*/;
   
-  private native Object convertToJavaObject(Object value) /*-[
+  private native static Object convertToJavaObject(Object value) /*-[
     if (value == nil || [value isKindOfClass: [NSNull class]]) {
       return nil;
     } else if ([value isKindOfClass: [NSNumber class]]) {
@@ -62,9 +62,9 @@ public class DataSnapshot {
     } else if ([value isKindOfClass: [NSString class]]) {
       return value;
     } else if ([value isKindOfClass: [NSArray class]]) {
-      return [self convertNsArrayToListWithId: value];
+      return [FCDataSnapshot convertNsArrayToListWithId: value];
     } else if ([value isKindOfClass: [NSDictionary class]]) {
-      return [self convertNsDictionaryToMapWithId: value];
+      return [FCDataSnapshot convertNsDictionaryToMapWithId: value];
     } else {
       @throw [[JavaLangIllegalStateException alloc] initWithNSString:@"Unable to convert to java object"];
     }
@@ -72,7 +72,7 @@ public class DataSnapshot {
   
   public native Object getValue() /*-[
     FDataSnapshot *snapshot = self->snapshot_;
-    return [self convertToJavaObjectWithId: snapshot.value];  
+    return [FCDataSnapshot convertToJavaObjectWithId: snapshot.value];  
   ]-*/;
 
   @SuppressWarnings("unchecked")
@@ -92,7 +92,7 @@ public class DataSnapshot {
   
   public native Object getPriority() /*-[
     FDataSnapshot *snapshot = self->snapshot_;
-    return [self convertToJavaObjectWithId: snapshot.priority];
+    return [FCDataSnapshot convertToJavaObjectWithId: snapshot.priority];
   ]-*/;
   
   public native String getName() /*-[
