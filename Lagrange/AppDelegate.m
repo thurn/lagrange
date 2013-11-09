@@ -17,19 +17,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    FCFirebase *fc = [[FCFirebase alloc] initWithNSString: @"https://gwt.firebaseio.com/name"];
-    id list = [FCDataSnapshot convertNsArrayToListWithId: @[@1, @2, @3]];
+    FCFirebase *fc = [[FCFirebase alloc] initWithNSString: @"https://myapp.firebaseIO-demo.com/"];
     id map = [FCDataSnapshot convertNsDictionaryToMapWithId: @{@"key1": @"value1", @"key2": @"value2"}];
     id<FCValueEventListener> listener = [[FCTestPrintingListener alloc] init];
     [fc addValueEventListenerWithFCValueEventListener: listener];
-    [fc setValueWithId: list];
+    [fc setValueWithId: map];
     NSLog(@"name: %@", [fc getName]);
-    
-    Firebase *f = [[Firebase alloc] initWithUrl:@"https://gwt.firebaseio.com/"];
-//    [f setValue:@"hi"];
-//    [f observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-//        NSLog(@"%@ -> %@", snapshot.name, snapshot.value);
-//    }];
     
     return YES;
 }
