@@ -56,6 +56,8 @@
 		7CBB171C182EFEA7007ABC60 /* FirebaseTest.java in Sources */ = {isa = PBXBuildFile; fileRef = 7CBB171A182EFEA7007ABC60 /* FirebaseTest.java */; };
 		7CCB8AB0182B6C8D00FDF1D7 /* TRVSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB8AAE182B6C8D00FDF1D7 /* TRVSMonitor.m */; };
 		7CFD7F6E18285E9900FE0E9E /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFD7F6D18285E9900FE0E9E /* Firebase.framework */; };
+		7CFE80B61831A25F00170E8F /* OnDisconnect.java in Sources */ = {isa = PBXBuildFile; fileRef = 7CFE80B51831A25F00170E8F /* OnDisconnect.java */; };
+		7CFE80B71831A29000170E8F /* OnDisconnect.java in Sources */ = {isa = PBXBuildFile; fileRef = 7CFE80B51831A25F00170E8F /* OnDisconnect.java */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -143,6 +145,7 @@
 		7CCB8AAF182B6C8D00FDF1D7 /* TRVSMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRVSMonitor.h; sourceTree = "<group>"; };
 		7CCB8B1F182EF2F000FDF1D7 /* JUnitCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUnitCore.h; sourceTree = "<group>"; };
 		7CFD7F6D18285E9900FE0E9E /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		7CFE80B51831A25F00170E8F /* OnDisconnect.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = OnDisconnect.java; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +293,7 @@
 		7CBB16ED182EFE9B007ABC60 /* client */ = {
 			isa = PBXGroup;
 			children = (
+				7CFE80B51831A25F00170E8F /* OnDisconnect.java */,
 				7CBB16EE182EFE9B007ABC60 /* ChildEventListener.java */,
 				7CBB16EF182EFE9B007ABC60 /* DataSnapshot.java */,
 				7CBB16F0182EFE9B007ABC60 /* Firebase.java */,
@@ -456,6 +460,7 @@
 				7C187EE31824329E0082E0E2 /* AppDelegate.m in Sources */,
 				7CBB16FC182EFE9B007ABC60 /* DataSnapshot.java in Sources */,
 				7CBB170A182EFE9B007ABC60 /* Transaction.java in Sources */,
+				7CFE80B61831A25F00170E8F /* OnDisconnect.java in Sources */,
 				7C187EDF1824329E0082E0E2 /* main.m in Sources */,
 				7CBB1710182EFE9B007ABC60 /* WrappedValueEventListener.java in Sources */,
 				7CBB170C182EFE9B007ABC60 /* ValueEventListener.java in Sources */,
@@ -470,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CFE80B71831A29000170E8F /* OnDisconnect.java in Sources */,
 				7CBB170D182EFE9B007ABC60 /* ValueEventListener.java in Sources */,
 				7CBB1709182EFE9B007ABC60 /* TestPrintingListener.java in Sources */,
 				7CBB171C182EFEA7007ABC60 /* FirebaseTest.java in Sources */,

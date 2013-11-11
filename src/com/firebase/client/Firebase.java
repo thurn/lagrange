@@ -86,7 +86,7 @@ public class Firebase extends Query {
     }
   ]-*/;
   
-  private native Object wrapCompletionListener(CompletionListener listener) /*-[
+  private static native Object wrapCompletionListener(CompletionListener listener) /*-[
     return ^(NSError *error, Firebase *ref) {
       [listener onCompleteWithFCFirebaseError: [[FCFirebaseError alloc] initWithId: error]];
     };
@@ -221,5 +221,9 @@ public class Firebase extends Query {
                andCompletionBlock: completionBlock
                   withLocalEvents: fireLocalEvents];
   ]-*/;
+  
+  public OnDisconnect onDisconnect() {
+    return new OnDisconnect(firebase);
+  }
   
 }
